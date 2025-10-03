@@ -388,6 +388,5 @@ pytest tests/test_servers/test_accumulation_server.py
 
 ---
 
-**개발팀**: 국민대학교 김지원, 이유진, 주소정, 최종은  
 **프로젝트**: 2025 Koscom AI Agent Challenge  
 **지원 플랫폼**: Claude Desktop, 웹 대시보드, 모바일 API, Docker
