@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "retirement-ai-agent": {
+      "command": "python",
+      "args": ["src/main.py"],
+      "env": {
+        "PYTHONPATH": ".",
+        "SECRET_KEY": "retirement-ai-agent-secret-key-2025",
+        "ENCRYPTION_KEY": "retirement-encryption-key-2025"
+      }
+    }
+  }
+}

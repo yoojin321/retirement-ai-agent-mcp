@@ -1,0 +1,7 @@
+{
+  "scenario_type": "moderate",
+  "inflation_rate": 0.025,
+  "pre_retirement_return": 0.04,
+  "post_retirement_return": 0.025,
+  "wage_growth_rate": 0.04
+}

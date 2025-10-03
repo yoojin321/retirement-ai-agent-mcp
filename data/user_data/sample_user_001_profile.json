@@ -1,0 +1,74 @@
+{
+  "user_id": "sample_user_001",
+  "personal_info": {
+    "current_age": 35,
+    "target_retirement_age": 65,
+    "life_expectancy": 85,
+    "health_status": "good",
+    "family_dependents": 2
+  },
+  "income_structure": {
+    "monthly_income": 5000000.0,
+    "annual_bonus": 10000000.0,
+    "rental_income": 0.0,
+    "other_income": 0.0,
+    "income_growth_rate": 0.03
+  },
+  "expense_structure": {
+    "essential_expenses": 3000000.0,
+    "discretionary_expenses": 1000000.0,
+    "retirement_expenses": 4000000.0,
+    "major_expenses": [
+      {
+        "name": "자녀 교육비",
+        "amount": 20000000,
+        "year": 5
+      },
+      {
+        "name": "주택 보수",
+        "amount": 10000000,
+        "year": 3
+      }
+    ]
+  },
+  "asset_portfolio": {
+    "cash_savings": 50000000.0,
+    "money_market_funds": 10000000.0,
+    "stocks": 30000000.0,
+    "bonds": 20000000.0,
+    "mutual_funds": 15000000.0,
+    "etfs": 10000000.0,
+    "national_pension": 2000000.0,
+    "occupational_pension": 0.0,
+    "personal_pension": 5000000.0,
+    "primary_residence": 500000000.0,
+    "investment_property": 0.0,
+    "insurance_cash_value": 5000000.0,
+    "other_assets": 0.0
+  },
+  "debt_structure": {
+    "mortgage_balance": 200000000.0,
+    "mortgage_rate": 0.04,
+    "credit_card_debt": 0.0,
+    "personal_loans": 0.0,
+    "other_debts": 0.0
+  },
+  "investment_preferences": {
+    "risk_tolerance": "moderate",
+    "investment_horizon": 30,
+    "liquidity_needs": [
+      {
+        "name": "자녀 교육비",
+        "amount": 20000000,
+        "year": 5
+      }
+    ],
+    "preferred_assets": [
+      "stocks",
+      "bonds",
+      "etfs"
+    ]
+  },
+  "created_at": "2025-10-03 19:06:24.488513",
+  "updated_at": "2025-10-03 19:06:24.492782"
+}
