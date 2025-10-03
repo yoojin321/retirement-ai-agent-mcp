@@ -308,7 +308,7 @@ async def fetch_market_data(symbols: Optional[str] = None, period: str = "1mo"):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/external/economic-indicators")
-async def fetch_economic_indicators(country: str = "US"):
+async def fetch_economic_indicators(country: str = "KR"):
     """경제 지표 수집"""
     try:
         result = await external_api_server.fetch_economic_indicators(country=country)
@@ -326,7 +326,7 @@ async def fetch_pension_info(country: str = "KR"):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/external/interest-rates")
-async def fetch_interest_rates(country: str = "US"):
+async def fetch_interest_rates(country: str = "KR"):
     """금리 정보 수집"""
     try:
         result = await external_api_server.fetch_interest_rates(country=country)

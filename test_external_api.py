@@ -28,7 +28,7 @@ async def test_external_api():
         
         # 2. 경제 지표 수집 테스트
         print("\n2️⃣ 경제 지표 수집 테스트")
-        economic_result = await server.fetch_economic_indicators(country="US")
+        economic_result = await server.fetch_economic_indicators(country="KR")
         print(f"✅ 경제 지표: {economic_result['status']}")
         if economic_result['status'] == 'success':
             print(f"📈 수집된 지표: {list(economic_result['data'].keys())}")
@@ -42,7 +42,7 @@ async def test_external_api():
         
         # 4. 금리 정보 수집 테스트
         print("\n4️⃣ 금리 정보 수집 테스트")
-        interest_result = await server.fetch_interest_rates(country="US")
+        interest_result = await server.fetch_interest_rates(country="KR")
         print(f"✅ 금리 정보: {interest_result['status']}")
         if interest_result['status'] == 'success':
             print(f"💰 수집된 금리: {list(interest_result['data'].keys())}")

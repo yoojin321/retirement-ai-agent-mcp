@@ -1,7 +1,14 @@
-# 은퇴 설계 AI 에이전트 MCP 서버
+# 은퇴 설계 AI 에이전트 MCP 서버 - 한국 기준
 
 은퇴 설계를 위한 AI 에이전트 MCP(Model Context Protocol) 서버입니다. 
-사용자의 개인 맞춤형 은퇴 계획 수립을 도와주는 종합 솔루션을 제공합니다.
+**한국 기준**으로 사용자의 개인 맞춤형 은퇴 계획 수립을 도와주는 종합 솔루션을 제공합니다.
+
+## 🇰🇷 한국 특화 기능
+- **한국 연금제도**: 국민연금, 퇴직연금, IRP, 연금저축, 주택연금
+- **한국 세제**: 소득세, 자본이득세, 연금세 등 한국 세법 반영  
+- **한국 금융시장**: KOSPI, KOSDAQ, 한국 국채, 한국 기준금리
+- **한국 경제지표**: 한국은행, 통계청 데이터 연동
+- **한국 통화**: 원화(KRW) 기준 계산
 
 ## 🚀 주요 기능
 
@@ -92,6 +99,8 @@ cd retirement-ai-agent-mcp
 ```bash
 cp env.example .env
 # .env 파일을 편집하여 필요한 환경 변수 설정
+# 💡 API 키 없이도 기본 기능 사용 가능 (샘플 데이터 사용)
+# 🔑 실시간 데이터를 원한다면 한국은행, 통계청 API 키 발급 권장
 ```
 
 ### 3. Docker로 실행 (권장)
@@ -161,54 +170,69 @@ python src/mcp_server.py
 python src/docker_main.py
 ```
 
-## 🔧 주요 MCP 도구 (총 37개)
+## 🔧 MCP 도구 개요
 
-### 적립메이트 도구 (8개)
-- `collect_user_profile`: 사용자 정보 수집
-- `calculate_retirement_goal`: 은퇴 목표 자금 계산
-- `project_asset_values`: 자산 미래가치 계산
-- `optimize_savings_plan`: 저축 계획 최적화
-- `set_economic_assumptions`: 경제 가정 설정
-- `analyze_funding_gap`: 자금 격차 분석
-- `simulate_scenarios`: 시나리오 시뮬레이션
-- `generate_reports`: 보고서 생성
+**총 37개의 MCP 도구**를 통해 종합적인 은퇴 설계 솔루션을 제공합니다.
 
-### 투자메이트 도구 (7개)
-- `assess_risk_profile`: 리스크 프로파일 평가
-- `generate_portfolio_options`: 포트폴리오 옵션 생성
-- `adjust_for_volatility`: 변동성 조정
-- `monitor_performance`: 성과 모니터링
-- `optimize_portfolio`: 포트폴리오 최적화
-- `benchmark_performance`: 성과 벤치마킹
-- `rebalance_portfolio`: 포트폴리오 리밸런싱
+### 📊 주요 도구 카테고리
+- **적립메이트 (8개)**: 자산 적립 계획, 목표 자금 계산, 시나리오 분석
+- **투자메이트 (7개)**: 포트폴리오 구성, 리스크 관리, 성과 모니터링  
+- **인출메이트 (7개)**: 안전인출률 계산, 3버킷 전략, 세금 최적화
+- **데이터 관리 (7개)**: 개인 데이터 암호화, 백업, 복원
+- **외부 API (8개)**: 실시간 시장 데이터, 경제지표, 연금 정보
 
-### 인출메이트 도구 (7개)
-- `analyze_retirement_assets`: 은퇴 자산 구조 분석
-- `optimize_withdrawal_sequence`: 인출 순서 최적화
-- `manage_bucket_strategy`: 3버킷 전략 관리
-- `compare_scenarios`: 시나리오 비교
-- `simulate_withdrawals`: 인출 시뮬레이션
-- `optimize_tax_strategy`: 세금 최적화
-- `monitor_sustainability`: 지속가능성 모니터링
+## 💬 질문과 답변 예시
 
-### 데이터 관리 도구 (7개)
-- `manage_local_database`: 로컬 데이터베이스 관리
-- `encrypt_sensitive_data`: 민감 데이터 암호화
-- `decrypt_sensitive_data`: 암호화된 데이터 복호화
-- `backup_user_data`: 사용자 데이터 백업
-- `restore_user_data`: 사용자 데이터 복원
-- `list_backups`: 백업 목록 조회
-- `cleanup_old_backups`: 오래된 백업 정리
+### 🏦 적립메이트 (자산 적립)
+**Q: "35세 직장인입니다. 65세 은퇴을 목표로 월 200만원씩 저축하고 있는데, 은퇴 시점에 얼마나 모을 수 있을까요?"**
 
-### 외부 API 도구 (8개)
-- `fetch_market_data`: 시장 데이터 수집
-- `fetch_economic_indicators`: 경제 지표 수집
-- `fetch_pension_info`: 연금 정보 수집
-- `fetch_interest_rates`: 금리 정보 수집
-- `fetch_stock_data`: 주식 데이터 수집
-- `fetch_bond_data`: 채권 데이터 수집
-- `fetch_currency_rates`: 환율 정보 수집
-- `fetch_inflation_data`: 인플레이션 데이터 수집
+**A: 적립메이트가 분석해드리겠습니다:**
+- 현재 자산: 5,000만원
+- 월 저축액: 200만원
+- 예상 수익률: 5% (연간)
+- 30년 후 예상 자산: **약 15억원**
+- 권장사항: IRP와 연금저축을 활용한 세제 혜택 최대화
+
+### 📈 투자메이트 (포트폴리오 구성)
+**Q: "보수적인 성향인데, 안전하면서도 적절한 수익을 낼 수 있는 포트폴리오를 추천해주세요."**
+
+**A: 투자메이트가 보수형 포트폴리오를 제안합니다:**
+- **채권 55%**: 한국 국채, 회사채
+- **주식 20%**: KOSPI 대형주, 배당주
+- **현금 10%**: 정기예금, MMF
+- **대체투자 10%**: 금, REITs
+- **기타 5%**: 해외 채권
+- 예상 수익률: 4-5% (연간)
+
+### 💰 인출메이트 (은퇴 후 인출)
+**Q: "65세에 10억원 자산으로 은퇴했는데, 매월 얼마씩 인출해야 안전할까요?"**
+
+**A: 인출메이트가 안전인출 전략을 제안합니다:**
+- **안전인출률**: 월 250만원 (연 3,000만원, 3% 인출률)
+- **3버킷 전략**:
+  - 버킷1 (현금): 2년분 6,000만원
+  - 버킷2 (채권): 3년분 9,000만원  
+  - 버킷3 (주식): 나머지 8.5억원
+- **인플레이션 대응**: 매년 2.8% 인출액 증가
+
+### 📊 데이터메이트 (개인 데이터 관리)
+**Q: "여러 금융사에 분산된 자산을 통합 관리하고 싶어요."**
+
+**A: 데이터메이트가 통합 관리 솔루션을 제공합니다:**
+- **자산 통합**: 모든 계좌 정보를 하나의 대시보드에서 관리
+- **자동 분류**: 현금, 주식, 채권, 부동산별 자동 분류
+- **성과 추적**: 계좌별 수익률 및 전체 포트폴리오 성과 분석
+- **보안**: 모든 데이터는 로컬에 암호화 저장
+
+### 🌐 외부 API (실시간 데이터)
+**Q: "현재 시장 상황이 은퇴 계획에 어떤 영향을 미칠까요?"**
+
+**A: 외부 API가 실시간 시장 데이터를 분석해드립니다:**
+- **KOSPI**: 2,450 (-1.2%)
+- **한국 10년 국채**: 3.6%
+- **기준금리**: 3.5%
+- **인플레이션**: 2.8%
+- **권장사항**: 현재 금리 상승기에 채권 비중 확대 고려
 
 ## 🔒 보안 및 개인정보보호
 
@@ -332,14 +356,6 @@ pytest tests/test_servers/test_accumulation_server.py
 3. **서비스 상태**: `docker ps`
 4. **로그 확인**: `docker-compose logs -f`
 
-## 🤝 기여하기
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 📄 라이선스
 
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
@@ -369,21 +385,6 @@ pytest tests/test_servers/test_accumulation_server.py
 1. **웹 대시보드**: `streamlit run web_dashboard.py --server.port 8501`
 2. **모바일 API**: `python mobile_api.py`
 3. **HTTP API**: `python src/docker_main.py`
-
-## 📞 지원
-
-문제가 발생하거나 질문이 있으시면 이슈를 생성해 주세요.
-
-### 주요 파일 위치
-- **MCP 서버**: `src/mcp_server.py`
-- **웹 대시보드**: `web_dashboard.py`
-- **모바일 API**: `mobile_api.py`
-- **Docker 설정**: `docker-compose.yml`
-- **Claude 설정**: 
-  - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-  - macOS/Linux: `~/.config/claude/claude_desktop_config.json`
-- **설정 가이드**: `setup_claude_desktop.md`
-- **예시 설정 파일**: `claude_desktop_config_example.json`
 
 ---
 

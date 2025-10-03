@@ -1,0 +1,99 @@
+{
+  "country": "KR",
+  "currency": "KRW",
+  "tax_system": {
+    "income_tax": {
+      "progressive_rates": [
+        {"bracket": 0, "rate": 0.06, "max_amount": 12000000},
+        {"bracket": 1, "rate": 0.15, "max_amount": 46000000},
+        {"bracket": 2, "rate": 0.24, "max_amount": 88000000},
+        {"bracket": 3, "rate": 0.35, "max_amount": 150000000},
+        {"bracket": 4, "rate": 0.38, "max_amount": 300000000},
+        {"bracket": 5, "rate": 0.40, "max_amount": 500000000},
+        {"bracket": 6, "rate": 0.42, "max_amount": 1000000000},
+        {"bracket": 7, "rate": 0.45, "max_amount": null}
+      ],
+      "local_income_tax_rate": 0.10
+    },
+    "capital_gains_tax": {
+      "stock_tax": {
+        "kospi_kosdaq": {
+          "rate": 0.22,
+          "description": "KOSPI/KOSDAQ 주식 양도소득세"
+        },
+        "konex": {
+          "rate": 0.20,
+          "description": "KONEX 주식 양도소득세"
+        },
+        "small_cap_exemption": {
+          "rate": 0.00,
+          "max_amount": 2000000,
+          "description": "소액주식 양도소득 비과세"
+        }
+      },
+      "bond_tax": {
+        "government_bonds": {
+          "rate": 0.154,
+          "description": "국채 이자소득세"
+        },
+        "corporate_bonds": {
+          "rate": 0.154,
+          "description": "회사채 이자소득세"
+        }
+      },
+      "real_estate_tax": {
+        "rate": 0.06,
+        "additional_tax": 0.20,
+        "description": "부동산 양도소득세 (기본 6% + 추가 20%)"
+      }
+    },
+    "pension_tax": {
+      "national_pension": {
+        "contribution_rate": 0.09,
+        "max_contribution": 5310000,
+        "min_contribution": 531000,
+        "tax_deduction": true
+      },
+      "retirement_pension": {
+        "dc_contribution_rate": 0.12,
+        "tax_deduction": true,
+        "withdrawal_tax": "progressive"
+      },
+      "irp": {
+        "annual_limit": 12000000,
+        "tax_deduction": true,
+        "withdrawal_tax": "progressive"
+      },
+      "pension_savings": {
+        "annual_limit": 4000000,
+        "tax_deduction": true,
+        "withdrawal_tax": "progressive"
+      }
+    },
+    "deductions": {
+      "basic_deduction": 1500000,
+      "spouse_deduction": 1500000,
+      "dependent_deduction": 1500000,
+      "senior_deduction": 1000000,
+      "disabled_deduction": 2000000,
+      "medical_expense_deduction": 0.15,
+      "education_expense_deduction": 0.15,
+      "pension_contribution_deduction": 0.15,
+      "insurance_premium_deduction": 0.12
+    },
+    "retirement_benefits": {
+      "lump_sum": {
+        "tax_free_amount": 20000000,
+        "progressive_tax": true,
+        "description": "퇴직금 일시금"
+      },
+      "pension_income": {
+        "tax_free_amount": 3000000,
+        "progressive_tax": true,
+        "description": "연금소득"
+      }
+    }
+  },
+  "last_updated": "2024-01-01",
+  "source": "국세청, 한국은행"
+}

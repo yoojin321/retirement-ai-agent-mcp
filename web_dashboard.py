@@ -354,7 +354,7 @@ class RetirementDashboard:
             retirement_years = st.number_input("은퇴 기간 (년)", min_value=1, max_value=50, value=25, key="with_years")
         
         with col2:
-            inflation_rate = st.number_input("예상 인플레이션률 (%)", min_value=0.0, max_value=10.0, value=2.5, step=0.1, key="with_inflation")
+            inflation_rate = st.number_input("예상 인플레이션률 (%)", min_value=0.0, max_value=10.0, value=2.8, step=0.1, key="with_inflation")
             tax_rate = st.number_input("예상 세율 (%)", min_value=0.0, max_value=50.0, value=20.0, step=1.0, key="with_tax")
             risk_tolerance = st.selectbox("리스크 성향", ["보수적", "중립적", "공격적"], key="with_risk")
         
